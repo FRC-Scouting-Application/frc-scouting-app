@@ -1,0 +1,8 @@
+{
+  "name": "FRCScoutingApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "c56626cb"
+}
