@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FRCScoutingApp</string>
+    <string name="title_activity_main">FRCScoutingApp</string>
+    <string name="package_name">ca.tnoah.frcscouting</string>
+    <string name="custom_url_scheme">ca.tnoah.frcscouting</string>
+</resources>
