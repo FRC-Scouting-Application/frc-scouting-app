@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title *ngIf="team">
+        {{ team.teamNumber }} {{ team.nickname }}
+    </ion-title>
+  </ion-toolbar>
+  <img id="team-img" src="../../../../assets/example-pics/trojans-team.jpg"/>
+</ion-header>
+<ion-content>
+
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button
+        [tab]="p.url"
+        *ngFor="let p of appPages; let i = index"
+        routerLinkActive="selected"
+      >
+        <ion-icon [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"></ion-icon>
+        <ion-label>{{ p.title }}</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

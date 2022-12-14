@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BaseApiService } from './base.api.service';
 import { HttpClient, HttpHeaders, HttpRequest, HttpResponse } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { filter, map, Observable } from 'rxjs';
 import { StrictHttpResponse } from '../strict-http-response';
 import { Event, Match, Scout, Team, Template } from '../models/dbo-models';
 
@@ -26,7 +26,7 @@ class ScoutApiService extends BaseApiService {
     });
 
     return this.http.request<any>(req).pipe(
-      // @ts-ignore
+    	// @ts-ignore
       filter((_r) => _r instanceof HttpResponse),
       map((_r: HttpResponse<any>) => {
         return _r as StrictHttpResponse<Array<Event>>;

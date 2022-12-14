@@ -4,20 +4,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'teams',
     pathMatch: 'full'
   },
   {
-    path: 'pages/teams',
+    path: 'teams',
     loadChildren: () => import('./pages/teams/teams.module').then( m => m.TeamsPageModule)
   },
   {
-    path: 'pages/events',
+    path: 'events',
     loadChildren: () => import('./pages/events/events.module').then( m => m.EventsPageModule)
   },
-
-
-
 ];
 
 @NgModule({
