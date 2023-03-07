@@ -16,7 +16,7 @@
 
 <main>
   <ion-list>
-    <ion-item *ngFor="let team of teams">
+    <ion-item *ngFor="let team of teams" (click)="onClickTeam(team)">
         <ion-label>
             <h2>{{ team.teamNumber }}</h2>
             <h3>{{ team.nickname }}</h3>

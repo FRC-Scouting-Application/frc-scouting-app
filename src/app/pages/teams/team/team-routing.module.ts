@@ -7,8 +7,30 @@ const routes: Routes = [
   {
     path: '',
     component: TeamPage,
-    loadChildren: () => import('./team-detail/team-detail.module').then( m => m.TeamDetailPageModule)
-  }
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'team'
+      },
+      {
+        path: 'team',
+        loadChildren: () => import('./team-detail/team-detail.module').then((m) => m.TeamDetailModule)
+      },
+      {
+        path: 'pit',
+        loadChildren: () => import('./pit-scout/pit-scout.module').then((m) => m.PitScoutModule)
+      },
+      {
+        path: 'match',
+        loadChildren: () => import('./match-scout/match-scout.module').then((m) => m.MatchScoutModule)
+      },
+      {
+        path: 'notes',
+        loadChildren: () => import('./notes/notes.module').then((m) => m.NotesModule)
+      }
+    ]
+  },
 ];
 
 @NgModule({

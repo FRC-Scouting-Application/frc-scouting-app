@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TeamsPageRoutingModule } from './teams-routing.module';
+import { TeamsPageRoutingModule } from './teams-list-routing.module';
 
-import { TeamsPage } from './teams.page';
+import { TeamsListPage } from './teams-list.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { TeamsPage } from './teams.page';
     IonicModule,
     TeamsPageRoutingModule
   ],
-  declarations: [TeamsPage]
+  declarations: [TeamsListPage]
 })
 export class TeamsPageModule {}

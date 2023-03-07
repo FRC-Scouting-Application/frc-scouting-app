@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TeamsPage } from './teams.page';
+import { TeamsListPage } from './teams-list.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: TeamsPage
+    component: TeamsListPage
   },
   {
-    path: 'team/:id',
-    loadChildren: () => import('./team/team.module').then( m => m.TeamPageModule)
+    path: ':id',
+    loadChildren: () => import('../team/team.module').then( m => m.TeamPageModule)
   }
 ];
 

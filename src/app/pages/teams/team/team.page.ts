@@ -11,10 +11,10 @@ import { RootStoreState, ScoutStoreActions, ScoutStoreSelectors } from 'src/app/
 })
 export class TeamPage implements OnInit {
   public appPages = [
-    { title: 'Team', url: '', icon: 'people' },
+    { title: 'Team', url: 'team', icon: 'people' },
     { title: 'Pit Scout', url: 'pit', icon: 'home'},
     { title: 'Match Scout', url: 'match', icon: 'pulse' },
-    { title: 'Notes', url: 'note', icon: 'clipboard'},
+    { title: 'Notes', url: 'notes', icon: 'clipboard'},
   ];
 
 	public team: Team | undefined | null = undefined;

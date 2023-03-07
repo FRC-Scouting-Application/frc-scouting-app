@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-
-import { TeamDetailPageRoutingModule } from './team-detail-routing.module';
-
-import { TeamDetailPage } from './team-detail.page';
+import { TeamDetailComponent } from './team-detail.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    TeamDetailPageRoutingModule
+    IonicModule, 
+    RouterModule.forChild([{ path: '', component: TeamDetailComponent }]),
+    MatIconModule
   ],
-  declarations: [TeamDetailPage]
+  declarations: [TeamDetailComponent],
+  exports: [TeamDetailComponent],
 })
-export class TeamDetailPageModule {}
+export class TeamDetailModule {}

@@ -9,12 +9,13 @@ const routes: Routes = [
   },
   {
     path: 'teams',
-    loadChildren: () => import('./pages/teams/teams.module').then( m => m.TeamsPageModule)
+    loadChildren: () => import('./pages/teams/team-list/teams-list.module').then( m => m.TeamsPageModule)
   },
   {
     path: 'events',
     loadChildren: () => import('./pages/events/events.module').then( m => m.EventsPageModule)
   },
+
 ];
 
 @NgModule({

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { TeamDetailPage } from './team-detail.page';
+import { PitScoutComponent } from './pit-scout.component';
 
-describe('TeamDetailPage', () => {
-  let component: TeamDetailPage;
-  let fixture: ComponentFixture<TeamDetailPage>;
+describe('PitScoutComponent', () => {
+  let component: PitScoutComponent;
+  let fixture: ComponentFixture<PitScoutComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TeamDetailPage ],
+      declarations: [ PitScoutComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TeamDetailPage);
+    fixture = TestBed.createComponent(PitScoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));
